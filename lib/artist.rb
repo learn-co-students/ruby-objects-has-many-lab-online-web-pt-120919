@@ -38,12 +38,16 @@ class Artist
   #  .song_count is a class method that returns the total number of songs associated to all existing artists
 
 
-  def self.song_count
-    count = 0
+#  def self.song_count
+#    count = 0
+#
+#    @@all.each do |artist|
+#      count += artist.songs.size
+#    end
+#    count
+#  end
 
-    @@all.each do |artist|
-      count += artist.songs.size
-    end
-    count
-  end
+ def self.song_count
+   Song.all.count
+ end
 end
